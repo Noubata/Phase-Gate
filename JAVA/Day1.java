@@ -1,4 +1,3 @@
-import java.util.random;
 import java.util.Scanner; 
 public class Day1{
 public static void main(String...args){
@@ -7,8 +6,8 @@ int count_wrong_answer = 0;
 
 
 	for (int toRun = 1; toRun < 11; toRun++){
-	int number1 = random(31, 61);
-	int number2 = random(1, 30);
+	int number1 = Math.random(31, 61);
+	int number2 = Math.random(1, 30);
 	int result = number1 - number2;
 	
 	int question = System.out.printf("What is %d - %d: ", number1, number2);
