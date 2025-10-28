@@ -1,36 +1,46 @@
 import java.util.Scanner; 
+import java.util.Random;
 public class Day1{
 public static void main(String...args){
+Scanner input = new Scanner(System.in);
 int count_exact_answer = 0;
 int count_wrong_answer = 0;
 
-
-	for (int toRun = 1; toRun < 11; toRun++){
-	int number1 = Math.random(31, 61);
-	int number2 = Math.random(1, 30);
-	int result = number1 - number2;
+	Random repeat = new Random();
 	
-	int question = System.out.printf("What is %d - %d: ", number1, number2);
+
+	int toRun = 1;
+	while(true){
+	int number1 = repeat.nextInt(91)+34;
+	int number2 = repeat.nextInt(33)+1;
+	int result = number1 - number2;
+
+	System.out.printf("What is %d - %d%n ", number1, number2 + toRun);
+	int question = input.nextInt();
+	toRun++;
+	if (toRun > 10){
+	break;
+	}
 	if (question < 1){
 	
-		System.out.print("Invalid input");
+		System.out.println("Invalid input");
 	}else{
 
 		if (result == question){
 			count_exact_answer+=1;
-			System.out.print("Good! You won");
+			System.out.println("Good! You won");
 	
 		}else{
 			count_wrong_answer +=1;
-			System.out.print("Try again! You lost");
+			System.out.println("Try again! You lost");
 		}
 
 		if (count_exact_answer > count_wrong_answer){
 		
-			System.out.printf("Good! You won times", count_exact_answer);
+			System.out.printf("Good! You won %d times\n", count_exact_answer);
 
 		}else{
-			System.out.printf("Oops! You lost times", count_wrong_answer);
+			System.out.printf("Oops! You lost %d times\n", count_wrong_answer);
 		}
 	}
 	}

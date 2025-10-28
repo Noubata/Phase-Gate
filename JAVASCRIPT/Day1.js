@@ -9,7 +9,7 @@ let count_wrong_answer = 0;
 
 	while(toRun < 11){
 	toRun++
-	let question = prompt("What is %d - %d: ", number1, number2);
+	
 	if (question < 1){
 	
 		console.log("Invalid input");
