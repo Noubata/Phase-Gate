@@ -1,18 +1,13 @@
+import java.util.ArrayList;
 public class Occurrence{
-
-
-	public static String index(String TheWord){
-		char aCharacter= 'e';
-		String aString = "";
-		for(int eachString = 0; eachString < TheWord.length(); eachString++){
-		char letter = TheWord.charAt(eachString);
-		if (aCharacter == 'e'){
-			break;
+	public static int getPositionOfTheChar(String letters, char ch ){
+		int firstIndexNewWord = 0;
+		for(int count = 0; count < letters.length(); count++){
+			if(letters.charAt(count) == ch){
+				firstIndexNewWord = count;
+					break;
+			}
 		}
-		aString += letter;
+		return firstIndexNewWord;
 		}
-		return TheWord;
-	}
-
-} 
-
+}
