@@ -8,7 +8,7 @@ public class BuyMoto{
 		year ++;
 
 		System.out.print("Enter number of items: ");		
-		
+		int question = userInput.nextInt();
 		
 		if(question * 0.8 > 1){
 		count +=1;

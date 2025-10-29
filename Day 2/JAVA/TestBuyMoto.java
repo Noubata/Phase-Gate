@@ -3,10 +3,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 public class TestBuyMoto{
 
-	
+	public Price userInput ;
 	@BeforeEach
-	Price userInput ;
+	public void Test(){
 	userInput = new Price();
+	}
+	
+	
 
 	public void testThatItemsHaveFixedPrice(){
 
