@@ -1,18 +1,18 @@
-test_list = [4, 9, 25, 49]
-
+test_list = [4, 9, 25, 49, 100, 6]
 def perfect_square(test_list):
-
-	newBox = []
-	number1 =0
+	count = 0
+	newBox = test_list
 	for number in test_list:
-		if number == number**0.5 * number**0.5:
-			testList[number] = true
-			return test_list
-		}else{
-			testList[number] = true
-			return test_list
+		new_number = number**0.5 * number**0.5
+		if new_number == number:
+			newBox[count]= True
+		else:
+			newBox[count]= False
+		count += 1
+	return newBox
+
 			
-console.log(perfectSquare(testList))
+print(perfect_square(test_list))
 
 
 

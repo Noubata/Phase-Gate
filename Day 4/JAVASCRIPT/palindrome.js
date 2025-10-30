@@ -5,9 +5,10 @@ function palindrome (testList){
 	for(let word = 0; word < testList.length; word++){
 
 	let myString = testList[word];
+
 	let newString = ""
 	
-	for(let theString = 0; theString < myString.length ; theString--){
+	for(let theString = myString.length - 1; theString >=0; theString--){
 
 	newString += testList[theString]
 	}
